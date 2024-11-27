@@ -1,8 +1,11 @@
-import random 
+import random as rd 
 import string
+import uuid  
 
 def generator():
-     
+    
+    rd.seed(bin(uuid.getnode())) # seed based on the mac address of the executing device (normally)
+
     # Input management with error cases 
     length = input("Enter the length required: ")
     while not (length.isdigit() and int(length) >= 12):
@@ -42,7 +45,7 @@ def generator():
     # abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&'()*+, -./:;<=>?@[\]^_`{|}~
 
     # Generates the password by taking random choices in the alphabet length times 
-    password = ''.join(random.choice(alphabet) for i in range(length))
+    password = ''.join(rd.choice(alphabet) for i in range(length))
     
     print(f"Your password has been successfully created here : {password}")
     

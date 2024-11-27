@@ -1,0 +1,2 @@
+- Password requirements (symbols,digits...)
+- Storage in an encrypted file 
