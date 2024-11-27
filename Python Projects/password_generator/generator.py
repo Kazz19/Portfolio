@@ -53,4 +53,5 @@ def generator():
     
 ## ----------------------------------- MAIN ----------------------------------- ## 
 
-new_pass = generator()
+if __name__ == '__main__':
+    new_pass = generator()
